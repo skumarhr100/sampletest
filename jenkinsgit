@@ -6,6 +6,12 @@ pipeline{
 				git credentialsId: 'Githubid', url: 'https://github.com/skumarhr100/sampletest'
 			}
 		}
+		stage("Maven Build"){
+			steps{
+				sh "mvn clean package"
+			}
+		
+		}
 	
 	}
 }
