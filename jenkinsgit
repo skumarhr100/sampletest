@@ -1,5 +1,8 @@
 pipeline{
 	agent any
+	tools{
+		maven 'Maven'
+	}
 	stages{
 		stage("welcome"){
 			steps{
@@ -9,6 +12,7 @@ pipeline{
 		stage("Maven Build"){
 			steps{
 				echo "maven build start"
+				mvn test
 			}
 		
 		}
