@@ -6,13 +6,13 @@ pipeline{
 	stages{
 		stage("welcome"){
 			steps{
-				git credentialsId: 'Githubid', url: 'https://github.com/skumarhr100/sampletest'
+				echo "starting welcome process"
 			}
 		}
 		stage("Maven Build"){
 			steps{
-				echo "maven build start"
-				clean
+				echo "Starting test process"
+				
 			}
 		
 		}
