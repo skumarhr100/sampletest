@@ -1,0 +1,11 @@
+pipeline{
+	agent any
+	stages{
+		stage("welcome"){
+			steps{
+				git credentialsId: 'Githubid', url: 'https://github.com/skumarhr100/sampletest'
+			}
+		}
+	
+	}
+}
