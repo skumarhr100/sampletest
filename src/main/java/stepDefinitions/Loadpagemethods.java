@@ -21,9 +21,11 @@ public class Loadpagemethods {
 	@Given("^user is on website \"([^\"]*)\"$")
 	public void user_on_website(String url) {
 		
+		System.out.println("User is on website");
+		
 	/*
 		System.setProperty("webdriver.chromedriver", "C:\\practice\\jarfiles downloaded\\"
-				+ "browserdrivers\\chromedriver");*/
+				+ "browserdrivers\\chromedriver");
 		
 		System.setProperty("webdriver.geckodriver.driver", 
 				 "C:\\practice\\jarfiles downloaded\\geckodriver\\geckodriver.exe");
@@ -38,15 +40,15 @@ public class Loadpagemethods {
 		//driver.get("https://www.freecrm.com");
 		
 		driver.get (url);
-		
+		*/
 	}
 	
 	@When("^title of login page is displayed$")
 	public void title_of_login_page_is_displayed() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-	    String title = driver.getTitle();
+	   // String title = driver.getTitle();
 	   
-	    System.out.println("Title of the page"+title);
+	    System.out.println("Title of the page");
 	}
 
 	@Then("^user enters details$")
@@ -73,12 +75,12 @@ public class Loadpagemethods {
 	    
 		System.out.println("user is on the expected page");
 		
-		driver.quit();
+		//driver.quit();
 	}
 
 	@AfterSuite
 	public void tearDown() {
-		driver.quit();
+		//driver.quit();
 	}
 	
 }
